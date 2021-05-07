@@ -1,0 +1,22 @@
+<div class="login">
+    <div class="nav-btn">
+        <app-button></app-button>
+    </div>
+    <div class="login__form animated fadeIn">
+        <h1>Iniciar Sesión</h1>
+        <form [formGroup]="formLogin">
+            <mat-form-field appearance="legacy">
+                <mat-label>Nombre de Usuario</mat-label>
+                <input type="text" formControlName="username" matInput placeholder="usuario123">
+                <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="legacy">
+                <mat-label>Contraseña</mat-label>
+                <input type="password" formControlName="password" matInput placeholder="************">
+                <mat-icon matSuffix>vpn_key</mat-icon>
+            </mat-form-field>
+            <button mat-raised-button (click)="signIn()">Acceder</button>
+        </form>
+    </div>
+</div>

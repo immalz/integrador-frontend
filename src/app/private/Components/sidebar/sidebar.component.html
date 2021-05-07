@@ -1,0 +1,23 @@
+<div class="sidebar" *ngIf="user">
+    <div class="sidebar__logo animated fadeIn">
+        <img [src]="user.image || 'assets/images/user1.png'">
+        <span>{{user.username || 'noname' | uppercase}}</span>
+    </div>
+    <div class="sidebar__menu animated fadeIn">
+        <div mat-raised-button class="sidebar__menu--item">
+            <p routerLink="/perfil" (click)="getUser()">
+                <mat-icon>format_list_bulleted</mat-icon>
+                Resumen de Gastos
+            </p>
+        </div>
+        <div mat-raised-button class="sidebar__menu--item">
+            <p routerLink="/perfil/actualizar-datos" (click)="getUser()">
+                <mat-icon>update</mat-icon>
+                Actualizar Datos
+            </p>
+        </div>
+    </div>
+    <div class="sidebar__button">
+        <button mat-raised-button color="warn" (click)="exit()">Salir</button>
+    </div>
+</div>

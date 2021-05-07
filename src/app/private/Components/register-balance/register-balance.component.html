@@ -1,0 +1,14 @@
+<div class="balance">
+    <h1>Agrega un Monto Mensual</h1>
+    <p>Esta ventana solo aparecera por unica vez luego de que hayas creado una cuenta en la plataforma.</p>
+    <form [formGroup]="formData">
+
+        <mat-form-field appearance="legacy">
+            <mat-label>Monto</mat-label>
+            <input type="number" formControlName="balance" matInput placeholder="2123.00">
+            <mat-icon matSuffix>attach_money</mat-icon>
+        </mat-form-field>
+
+        <button [disabled]="!formData.valid" color="primary" mat-raised-button (click)="setBalance()">Guardar</button>
+    </form>
+</div>

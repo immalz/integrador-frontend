@@ -1,0 +1,28 @@
+<div class="register">
+    <div class="nav-btn">
+        <app-button></app-button>
+    </div>
+    <div class="register__form animated fadeIn">
+        <h1>Registrarse</h1>
+        <form [formGroup]="formRegister">
+            <mat-form-field appearance="legacy">
+                <mat-label>Nombre de Usuario</mat-label>
+                <input type="text" formControlName="username" matInput placeholder="usuario123">
+                <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="legacy">
+                <mat-label>Correo Electronico</mat-label>
+                <input type="text" formControlName="email" matInput placeholder="correo@prueba.com">
+                <mat-icon matSuffix>alternate_email</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="legacy">
+                <mat-label>Contraseña</mat-label>
+                <input type="password" formControlName="password" matInput placeholder="************">
+                <mat-icon matSuffix>vpn_key</mat-icon>
+            </mat-form-field>
+            <button mat-raised-button (click)="signUp()">GUARDAR</button>
+        </form>
+    </div>
+</div>

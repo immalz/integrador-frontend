@@ -1,0 +1,19 @@
+.add {
+  width: 380px;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.add h1 {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+}
+
+.add form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,27 @@
+<div class="add">
+    <h1>{{textMode}}</h1>
+    <form [formGroup]="formData">
+        <mat-form-field appearance="legacy">
+            <mat-label>Nombre de Referencia</mat-label>
+            <input type="text" formControlName="name" matInput placeholder="gasto por...">
+            <mat-icon matSuffix>forum</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="legacy">
+            <mat-label>Monto</mat-label>
+            <input type="number" formControlName="amount" matInput placeholder="2123.00">
+            <mat-icon matSuffix>attach_money</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="legacy">
+            <mat-label>Elija una opcion</mat-label>
+            <mat-select disableRipple formControlName="type">
+                <mat-option value="1">Gasto</mat-option>
+                <mat-option value="2">Ingreso</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <button *ngIf="mode === 'create'" [disabled]="!formData.valid" color="primary" mat-raised-button (click)="saveAmount()">Guardar</button>
+        <button *ngIf="mode !== 'create'" [disabled]="!formData.valid" color="primary" mat-raised-button (click)="updateAmount()">Actualizar</button>
+    </form>
+</div>
